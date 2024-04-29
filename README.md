@@ -59,7 +59,7 @@ python eval.py -c="./configs/train/captured/cinema_two_views.ini" -tc="./configs
 
 ## Changes 
 
-I have realised that the models for the paper (the captured ones) were a bit undertrained (150k iterations), the configs thus train for longer than suggested in the paper (500k iterations). The difference for in PSNR is ~1dB for the 2/3 views case and ~3/4dB for the 5 views case. 
+I have realised that the models for the paper (the captured ones) were a bit undertrained (150k iterations), the configs thus train for longer than suggested in the paper (500k iterations). The difference is mainly important for the 5 views case, where PSNR increases by ~3/4dB. 
 
 ## Citation
 
