@@ -23,6 +23,8 @@ pip install -r requirements.txt
 
 ## Dataset 
 
+A README of the dataset can be found in the `loaders` folder. 
+
 Datasets can also be downloaded using the `download_datasets.py` script. With flags `--scenes o1 o2 o3`, replacing `o1`, `o2` and `o3` with scenes you want to download. You can use shorthand `all`, `captured` or `simulated` or otherwise specify scenes by their names.
 
 Datasets can also be downloaded from [Dropbox](https://www.dropbox.com/scl/fo/02hsk2e686mkjwziyofzt/AN9Op5vDidmS6roxN3Ho5mE?rlkey=op6qgnbrde2jcjzp2g2hw803a&st=oemq9pk6&dl=0).
@@ -57,7 +59,7 @@ python eval.py -c="./configs/train/captured/cinema_two_views.ini" -tc="./configs
 
 ## Changes 
 
-I have realised that the models for the paper (the captured ones) were a bit undertrained, the configs thus train for longer than suggested in the paper.
+I have realised that the models for the paper (the captured ones) were a bit undertrained (150k iterations), the configs thus train for longer than suggested in the paper (500k iterations). The difference for in PSNR is ~1dB for the 2/3 views case and ~3/4dB for the 5 views case. 
 
 ## Citation
 
