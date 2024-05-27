@@ -18,7 +18,7 @@ def download_dataset(scenes):
         "intrinsics.npy":"https://www.dropbox.com/scl/fi/s4whgdajo5jy5wmdtlhwf/intrinsics.npy?rlkey=s247t4pvtubn726dzpnwmnlrv&st=0hnobsb9&dl=0", 
         "pulse_low_flux.mat":"https://www.dropbox.com/scl/fi/x63omsjecjijpg5q5dpiw/pulse_low_flux.mat?rlkey=1dm9d8jrdrogtw2xbgg2x8x17&st=4gll02on&dl=0", 
     }
-    
+    os.makedirs("dataset", exist_ok = True)
     for file in ["pulse_low_flux.mat", "intrinsics.npy"]:
         command = f'wget "{link_dict[file]}" -O ./dataset/{file}'
         subprocess.run(command, shell=True)
